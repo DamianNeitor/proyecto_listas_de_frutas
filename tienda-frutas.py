@@ -23,6 +23,7 @@ def comprar():
                 if opcion == 1 :
                     cantidad_fruta =int(input("ingrese la cantidad de fruta que desea llevar:"))
                     print(f"{cantidad_fruta + lista_cantidad[0]}")
+                    x=cantidad_fruta * lista_precio_fruta[3]
                     lista_cantidad[0] += cantidad_fruta
                     x=cantidad_fruta * lista_precio_fruta[0]
                     print(f"{x} {lista_fruta[0]}")
