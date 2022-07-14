@@ -13,22 +13,21 @@ def guardado1():
 def mein():
     while True:
         menu1()
-        print("____________")
-        ver=str(input("escoja una opcion:"))
-        print("____________")
         print("_____________________________")
-        if ver == "1":
-            escribir=str(input("deme los productos a encargar:"))
-            guardado.append(escribir)
-        elif ver == "2":
-            guardado1()
-        elif ver == "3":    
-            print(guardado)
-            escribir=str(input("deme los productos que desea quitar:"))
-            guardado.remove(escribir)
-            print( f"{(guardado)} ")
-            
-        else: 
-            exit()
-
-mein()
+        ver=str(input("escoja una opcion:"))
+        print("_____________________________")
+        try:   
+            if ver == "1":
+                escribir=str(input("deme los productos a encargar:"))
+                guardado.append(escribir)#agregar con el mismo objeto de la variable
+            elif ver == "2":
+                guardado1()#llamos a la funcion guardado cual imprime
+            elif ver == "3":    
+                print(guardado)
+                escribir=str(input("deme los productos que desea quitar:"))
+                guardado.remove(escribir)#remover los objetos con el mismo valor de variable
+                print( f"{(guardado)} ")
+            else: 
+                exit()
+        except Exception:
+            print("porfavor ingrese algo")#el error es cuando no hay nada en el inventario
