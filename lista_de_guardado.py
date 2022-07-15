@@ -34,4 +34,4 @@ def mein():
 mein()
 #recordatorio no meter string a menos que sea necesario asi con el try se arregla el error de todo por si cometes un fallo de apretar una tecla
 #solo para mi y para quien vea el codigo
-#asdadasdasdasdasd 
+#asdadasdasdasdasd s
