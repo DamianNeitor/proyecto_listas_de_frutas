@@ -7,22 +7,22 @@ def menu1():
 
 def guardado1():
     print(f"recordatorio {(guardado)}")
-    print(guardado)
+
         
 
 def mein():
     while True:
-        menu1()
-        print("_____________________________")
-        ver=str(input("escoja una opcion:"))
-        print("_____________________________")
         try:   
-            if ver == "1":
+            menu1()
+            print("_____________________________")
+            ver=int(input("escoja una opcion:"))
+            print("_____________________________")
+            if ver == 1:
                 escribir=str(input("deme los productos a encargar:"))
                 guardado.append(escribir)#agregar con el mismo objeto de la variable
-            elif ver == "2":
+            elif ver == 2:
                 guardado1()#llamos a la funcion guardado cual imprime
-            elif ver == "3":    
+            elif ver == 3:    
                 print(guardado)
                 escribir=str(input("deme los productos que desea quitar:"))
                 guardado.remove(escribir)#remover los objetos con el mismo valor de variable
@@ -31,3 +31,5 @@ def mein():
                 exit()
         except Exception:
             print("porfavor ingrese algo")#el error es cuando no hay nada en el inventario
+mein()
+#recordatorio no meter string a menos que sea necesario asi con el try se arregla el error de todo por si cometes un fallo de apretar una tecla
