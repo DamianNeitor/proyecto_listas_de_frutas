@@ -1,0 +1,55 @@
+#ecuacion de segundo grado
+from cmath import sqrt
+from re import I
+import random
+from sys import excepthook
+# a =float(input("deme su numero"))
+# b =float(input("deme su numero"))
+# c =float(input("deme su numero"))
+# x = (- b - sqrt(( b ** 2 ) - (4 * a * c))) /(2*a)
+# s = (- b + sqrt(( b ** 2) - (4 * a * c))) /(2*a)
+# print(x)
+# print(s)
+lista=["chupamela","hola","caca", "boludiñio","retrasado","aweonao","boludo","hijo de puta", "gonorrea", "mama guevo","chinga tu madre ","maraca klia","chupame el pico", "sos tremendo choripan","zorra klia"]
+def menu():
+    print("hola a la webada segundo grado")
+def ingrese(a,b,c):
+    s = (- b + sqrt(( b ** 2) - (4 * a * c))) /(2*a)#sqrt es para sacar la raiz
+    print(s)
+    menu()
+  
+def ingrese2(a,b,c):
+    x = (- b - sqrt(( b ** 2 ) - (4 * a * c))) /(2*a)
+    print(x)
+    menu()
+def ingrese3(a,b,c):
+    s = (- b + sqrt(( b ** 2) - (4 * a * c))) /(2*a)
+    print(s)
+    x = (- b - sqrt(( b ** 2 ) - (4 * a * c))) /(2*a)
+    print(x)
+    menu()
+
+def main():
+    menu()
+    while True:
+        try:    
+            option= int (input("1)suma o 2)resta o 3)ambas:"))
+            if option <= 3 and option >=1:
+                a =float(input("deme su numero:"))
+                b =float(input("deme su numero:"))
+                c =float(input("deme su numero:"))
+                if option == 1:
+                    ingrese (a,b,c)
+                elif option == 2:
+                    ingrese2(a,b,c)
+                else:
+                    ingrese3(a,b,c)
+                print()
+            else:
+                exit()
+        except ValueError:
+            try:
+                print(lista [random.randint(0,11)])#recordatorio el lista[ramdon.randint(indice inicio,indice final)] 
+            except Exception:
+                print()
+main()
